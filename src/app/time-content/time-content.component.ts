@@ -15,4 +15,14 @@ export class TimeContentComponent implements OnInit {
     }, 1000);
   }
 
+  greet() {
+    if (this.currentTime.getHours() < 12)
+      return "Good Morning";
+    else if (this.currentTime.getHours() > 12 && this.currentTime.getHours() < 17)
+      return "Good Afternoon";
+    else if (this.currentTime.getHours() >= 17)
+      return "Good Evening";
+    else
+      return "Greetings";
+  }
 }

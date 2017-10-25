@@ -1,0 +1,12 @@
+.link-container{
+  margin:30px;
+  padding:10px;
+}
+
+.link-container a{
+  color:#ff9800;
+}
+
+.menu-content{
+  background: black;
+}
