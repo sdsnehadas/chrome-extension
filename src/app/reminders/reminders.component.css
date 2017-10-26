@@ -1,0 +1,20 @@
+.reminder-container{
+  /* float:right; */
+  margin-left: 965px;
+}
+
+
+.reminder-container a{
+  color:#e91e63;
+}
+
+.content-div{
+  background: black;
+  height:350px;
+  width:300px;
+}
+
+.add-button{
+  float: right;
+  margin-top: 67px;
+}
