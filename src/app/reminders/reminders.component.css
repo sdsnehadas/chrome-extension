@@ -1,6 +1,6 @@
 .reminder-container{
-  /* float:right; */
-  margin-left: 965px;
+  float:right;
+  margin-right: 100px;
 }
 
 
@@ -12,9 +12,21 @@
   background: black;
   height:350px;
   width:300px;
+  position:absolute;
+  overflow: auto;
 }
 
 .add-button{
+  float:right;
+}
+
+.reminder-data{
+  color: white;
+}
+
+.clear{
   float: right;
-  margin-top: 67px;
+  right:0;
+  margin-top: -37px;
+  top:0;
 }

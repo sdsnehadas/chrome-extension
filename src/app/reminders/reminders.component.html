@@ -3,7 +3,7 @@
     <a class="dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Reminders
     </a>
-    <div class="dropdown-menu content-div">
+    <div class="dropdown-menu content-div" id="reminderDiv">
       <!-- <div class="">
         <div class="input-group">
           <input type="text" name= "description" class="form-control" aria-label="Text input with checkbox" placeholder="Type in the reminder" [(ngModel)]="reminder.description">
@@ -15,16 +15,22 @@
         </div>
       </div>
       <button type="button" class="btn btn btn-outline-warning add-button" (click)="addReminder()">Add reminder</button> -->
+      <ul class="reminder-data" type="none">
+        <li *ngFor="let item of reminders;">
+          <p>{{item.description}}</p>
+          <span><i class="material-icons clear" (click)="removeReminder(item)">clear</i></span>
+        </li>
+      </ul>
       <form name="reminder_Form"  #reminderForm="ngForm">
-            <label class="pull-left">Description</label>
-            <input type="text" class="form-control" name="description" #description="ngModel" autofocus="" required  [(ngModel)]="reminder.description"/>
-            <div *ngIf="description.invalid" class="alert alert-danger">
+            <input type="text" class="form-control" name="description" #description="ngModel" autofocus="" required  [(ngModel)]="reminder.description" placeholder="Description"/>
+            <span class="glyphicon glyphicon-remove-circle"></span>
+            <div *ngIf="description.invalid && showValidation" class="alert alert-danger">
               <div *ngIf="description.errors.required">
                   Description is required
               </div>
             </div>
             <div class="add-button">
-              <button name="Submits" class="btn btn btn-outline-warning add-button" [disabled]="!reminderForm.valid" type="Submit" (click)="addReminder()">Add reminder</button>
+              <button name="Submits" class="btn btn btn-outline-warning add-button" type="Submit" (click)="addReminder()">Add reminder</button>
             </div>
         </form>
     </div>
