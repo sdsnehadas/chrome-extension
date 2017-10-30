@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor() { }
   ngOnInit() {
-    setInterval(this.changeBackground, 6000);
+    setInterval(this.changeBackground, 20000);
   }
 
   changeBackground() {
